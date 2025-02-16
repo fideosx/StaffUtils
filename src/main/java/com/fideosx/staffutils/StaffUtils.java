@@ -6,6 +6,9 @@ import net.md_5.bungee.api.plugin.Plugin;
 import com.fideosx.staffutils.utils.ConfigManager;
 import com.fideosx.staffutils.commands.*;
 import com.fideosx.staffutils.listeners.ChatListener;
+import com.fideosx.staffutils.queue.QueueManager;
+import com.fideosx.staffutils.queue.QueueCommand;
+
 
 public class StaffUtils extends Plugin {
     @Override
@@ -14,9 +17,11 @@ public class StaffUtils extends Plugin {
         logModulesStatus();
         registerCommands();
         registerListeners();
-        getLogger().info(ChatColor.GREEN + "StaffUtils ha sido habilitado correctamente.");
+        getLogger().info(ChatColor.AQUA + "-----------------------------------------------------");
         getLogger().info(ChatColor.AQUA + "StaffUtils by fideosx.");
-        getLogger().info(ChatColor.AQUA + "https://github.com/fideosx/StaffUtils.");
+        getLogger().info(ChatColor.AQUA + "Source Code: https://github.com/fideosx/StaffUtils.");
+        getLogger().info(ChatColor.AQUA + "-----------------------------------------------------");
+        getLogger().info(ChatColor.GREEN + "StaffUtils ha sido habilitado correctamente.");
     }
 
     @Override
@@ -37,6 +42,8 @@ public class StaffUtils extends Plugin {
         if (ConfigManager.isModuleEnabled("adminchat")) getProxy().getPluginManager().registerCommand(this, new AdminChat());
         if (ConfigManager.isModuleEnabled("reload")) getProxy().getPluginManager().registerCommand(this, new Reload());
         if (ConfigManager.isModuleEnabled("info")) getProxy().getPluginManager().registerCommand(this, new Info());
+        if (ConfigManager.isModuleEnabled("queue")) getProxy().getPluginManager().registerCommand(this, new QueueCommand()); // Registra el comando
+        if (ConfigManager.isModuleEnabled("queue"))getProxy().getPluginManager().registerListener(this, new QueueManager()); // Registra el listener
     }
 
     private void registerListeners() {

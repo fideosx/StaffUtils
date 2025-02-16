@@ -8,3 +8,4 @@ aliases:
   helpop: ["helpop", "help"]
   helpop-reply: ["helpop-reply", "hr"]
   alert: ["alert", "bc"]
+  queue: ["queue", "q"]

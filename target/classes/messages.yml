@@ -15,13 +15,14 @@ messages:
 # nulls
   no_permission: "&cNo tienes permiso para usar este comando."
   player_not_found: "{prefix} &cEl jugador no está en línea."
+  server_not_found: "{prefix} &cEl servidor &e{server} &cno existe."
 # staffchat
   staffchat_usage: "{prefix} &eUso: /&7staffchat <mensaje>"
-  staffchat_format: "&bSC &8» &b{player}&f: {message}"
+  staffchat_format: "&bSC &8{server} &8» &b{player}&f: {message}"
   staffchat_enabled: "{prefix} &aHas activado el StaffChat."
   staffchat_disabled: "{prefix} &cHas desactivado el StaffChat."
   adminchat_usage: "{prefix} &eUso: &7/adminchat <mensaje>"
-  adminchat_format: "&cAC &8» &c{player}&f: {message}"
+  adminchat_format: "&cAC &8{server} &8» &c{player}&f: {message}"
   adminchat_enabled: "{prefix} &aHas activado el AdminChat."
   adminchat_disabled: "{prefix} &cHas desactivado el AdminChat."
 # helpop
@@ -57,3 +58,8 @@ messages:
   reload_messages: "{prefix} &aLos mensajes han sido recargados."
   reload_permissions: "{prefix} &aLos permisos han sido recargados."
   reload_all: "{prefix} &aToda la configuración ha sido recargada."
+# Queue
+  queue_usage: "{prefix} &cUso: &7/queue <servidor>"
+  queue_join: "&aTe has unido a la cola para {server}."
+  queue_status: "&e[Queue] &aPosición: {position}/{total}."
+  queue_already: "&cYa estás en la cola para {server}."
