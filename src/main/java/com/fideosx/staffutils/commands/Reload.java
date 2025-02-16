@@ -9,7 +9,7 @@ import com.fideosx.staffutils.utils.ConfigManager;
 
 public class Reload extends Command {
     public Reload() {
-        super("reload", null, ConfigManager.getAliases("reload"));
+        super("sureload", null, ConfigManager.getAliases("reload"));
     }
 
     @Override
@@ -26,6 +26,10 @@ public class Reload extends Command {
         
         if (!player.hasPermission(ConfigManager.getPermission("reload"))) {
             player.sendMessage(new TextComponent(ConfigManager.getMessage("no_permission")));
+            return;
+        }
+        if (args.length == 0) {
+            sender.sendMessage(new TextComponent(ConfigManager.getMessage("reload_usage")));
             return;
         }
         

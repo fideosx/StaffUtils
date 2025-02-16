@@ -1,0 +1,7 @@
+permissions:
+  default: "sutils.default"
+  staffchat: "sutils.staffchat"
+  adminchat: "sutils.adminchat"
+  staff: "sutils.staff"
+  alert: "sutils.alert"
+  reload: "sutils.reload"
