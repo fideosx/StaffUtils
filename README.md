@@ -13,4 +13,4 @@
 # To-Do
 - SocialSpy
 - Msg command
-- Queque system
+- Queue system
