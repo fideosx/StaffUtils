@@ -1,5 +1,5 @@
 # Requeriments
-- BungeeCord
+- BungeeCord (Working on BungeeCord Forks, tested on XCord)
 # Features
 - Staff and Admin Chats
 - Helpop and report Commands
