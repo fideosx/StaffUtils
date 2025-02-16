@@ -10,3 +10,7 @@
 - Permissions
 # Modules
 - Disable modules on modules.yml if you don´t want to use something
+# To-Do
+- SocialSpy
+- Msg command
+- Queque system
