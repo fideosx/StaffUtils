@@ -1,0 +1,59 @@
+messages:
+# Configura el prefix para el plugin {prefix}, si esto está en blanco se usará el prefix por default "&7[&bStaffUtils&7]".
+  prefix: "&b&lStaff&f&lUtils &8»"
+# report
+  report_usage: "&4&lReport &8» &cUso: &7/report [usuario] [razón]"
+  report_submitted: "&4&lReport &8» &aTu reporte ha sido enviado con éxito."
+  report_received: "&4&lReport &8» &b{player} &fha reportado a &b{target} &fpor: {reason}."
+  report_accepted: "&4&lReport &8» &aHas aceptado el reporte de &b{player}."
+  report_rejected: "&4&lReport &8» &cHas denegado el reporte de &b{player}."
+  report_not_found: "&4&lReport &8» &cNo se encontró el reporte con ID &b{id}."
+  report_accept_usage: "&4&lReport &8» &cUso: &7/report-accept <ID del reporte>"
+  report_deny_usage: "&4&lReport &8» &cUso: &7/report-deny <ID del reporte>"
+  report_handled: "&4&lReport &8» &aTu reporte fue revisado por un miembro del staff."
+  report_denied: "&4&lReport &8» &cTu reporte fue denegado por un miembro del staff."
+# nulls
+  no_permission: "&cNo tienes permiso para usar este comando."
+  player_not_found: "{prefix} &cEl jugador no está en línea."
+# staffchat
+  staffchat_usage: "{prefix} &eUso: /&7staffchat <mensaje>"
+  staffchat_format: "&bSC &8» &b{player}&f: {message}"
+  staffchat_enabled: "{prefix} &aHas activado el StaffChat."
+  staffchat_disabled: "{prefix} &cHas desactivado el StaffChat."
+  adminchat_usage: "{prefix} &eUso: &7/adminchat <mensaje>"
+  adminchat_format: "&cAC &8» &c{player}&f: {message}"
+  adminchat_enabled: "{prefix} &aHas activado el AdminChat."
+  adminchat_disabled: "{prefix} &cHas desactivado el AdminChat."
+# helpop
+  helpop_usage: "&b&lHelpop &8» &cUso: &7/helpop <mensaje>"
+  helpop_sent: "&b&lHelpop &8» &aTu mensaje de ayuda ha sido enviado al staff."
+  helpop_format: "&b&lHelpop &8» &b{player}&f está solicitando ayuda: {message}"
+  helpop_reply_sent: "&b&lHelpop &8» &fRespuesta enviada al jugador."
+  helpop_reply_format: "&b&lHelpop &8» &b{staff} &frespondió: {message}"
+  helpop_reply_usage: "&b&lHelpop &8» &cUso: &7/helpop-reply <jugador> <mensaje>"
+# alert
+  alert_usage: "{prefix} &cUso: /alert <mensaje>"
+  alert_format: "&4&lProxy &8» &f{message}"
+# Placeholders no configurados
+#  staff_info: "&b[STAFF] &fInformación del jugador {player}:"
+#  player_server: "&bServidor: &f{server}"
+#  player_ping: "&bPing: &f{ping}ms"
+#  commands_list: "&aComandos disponibles: /report, /staffchat, /adminchat, /helpop, /helpop-reply, /alert, /info"
+# info
+  header: "&8&m+-----------&b&lStaff&f&lUtils&8v1 &7by &dfideosx&8&m----------+"
+  lines: 
+    - "&8 » &d/staffutils &7muestra esta página."
+    - "&8 » &d/helpop-reply &7responde un helpop."
+    - "&8 » &d/report-accept &7acepta un reporte."
+    - "&8 » &d/report-deny &7deniega un report."
+    - "&8 » &d/broadcast &7envía un anuncio."
+    - "&8 » &d/staffchat &7chat de staff."
+    - "&8 » &d/adminchat &7chat de admin."
+    - "&8 » &d/surl &7recarga la configuración."
+    - "&8&m+------------------------------------------+"
+# reload
+  reload_usage: "{prefix} &cUso: &7/surl <aliases|messages|permissions|all>"
+  reload_aliases: "{prefix} &aLos alias han sido recargados."
+  reload_messages: "{prefix} &aLos mensajes han sido recargados."
+  reload_permissions: "{prefix} &aLos permisos han sido recargados."
+  reload_all: "{prefix} &aToda la configuración ha sido recargada."

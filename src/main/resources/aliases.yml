@@ -1,0 +1,10 @@
+aliases:
+  report: ["report", "denunciar"]
+  report-accept: ["report-accept", "ra"]
+  report-deny: ["report-deny", "rd"]
+  staffchat: ["staffchat", "sc"]
+  adminchat: ["adminchat", "ac"]
+  reload: ["staffutilsreload", "surl", "stafffuutils reload"]
+  helpop: ["helpop", "help"]
+  helpop-reply: ["helpop-reply", "hr"]
+  alert: ["broadcast", "bc", "alert"]

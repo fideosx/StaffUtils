@@ -1,0 +1,5 @@
+name: StaffUtils
+author: fideosx
+main: com.fideosx.staffutils.StaffUtils
+version: 1.15
+dependencies: []
