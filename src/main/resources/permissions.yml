@@ -1,3 +1,9 @@
+# ---------------------------------------------------------
+# Configuración - Permisos
+# Source: https://github.com/fideosx/StaffUtils
+# Permisos que usan los comandos del plugin.
+# Puedes modificarlos a gusto.
+# ---------------------------------------------------------
 permissions:
   default: "sutils.default"
   staffchat: "sutils.staffchat"

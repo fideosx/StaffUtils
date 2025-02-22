@@ -17,6 +17,7 @@ public class ConfigManager {
     private static Configuration permissions;
     private static Configuration aliases;
     private static Configuration modules;
+    private static Configuration webhooks;
     private static Plugin plugin;
 
     public static void init(Plugin pluginInstance) {
@@ -25,6 +26,7 @@ public class ConfigManager {
         permissions = loadConfig("permissions.yml");
         aliases = loadConfig("aliases.yml");
         modules = loadConfig("modules.yml", getDefaultModulesContent());
+        webhooks = loadConfig("webhooks.yml");
     }
 
     private static Configuration loadConfig(String fileName) {
@@ -72,11 +74,16 @@ public class ConfigManager {
         modules = loadConfig("modules.yml", getDefaultModulesContent());
     }
 
+    public static void reloadWebhooks() {
+        webhooks = loadConfig("webhooks.yml");
+    }
+
     public static void reloadAll() {
         reloadAliases();
         reloadMessages();
         reloadPermissions();
         reloadModules();
+        reloadWebhooks();
     }
 
     public static String getPrefix() {
@@ -117,15 +124,49 @@ public class ConfigManager {
         return modules != null && modules.getBoolean("modules." + module, true);
     }
 
+    // Método para obtener la URL del webhook
+    public static String getWebhookUrl(String key) {
+        if (webhooks == null) {
+            return null;
+        }
+        return webhooks.getString("webhooks." + key + ".url", null);
+    }
+
+    // Método para obtener los mensajes del webhook en formato de lista
+    public static List<String> getWebhookMessages(String key) {
+        if (webhooks == null) {
+            return null;
+        }
+        return webhooks.getStringList("webhooks." + key + ".message");
+    }
+
+    // Método para obtener el header del webhook
+    public static String getWebhookHeader(String key) {
+        if (webhooks == null) {
+            return null;
+        }
+        return webhooks.getString("webhooks." + key + ".header", null);
+    }
+
+    // Obtener ID del rol del webhook
+    public static String getWebhookRoleId(String key) {
+        if (webhooks == null) {
+            return null;
+        }
+        return webhooks.getString("webhooks." + key + ".id", null);
+    }
+
     private static String getDefaultModulesContent() {
         return "modules:\n" +
                "  helpop: true\n" +
                "  reports: true\n" +
-               "  alerts: true\n" +
-               "  staffchat: true\n" +
-               "  adminchat: true\n" +
+               "  queue: true\n" +
+               "  alerts: false\n" +
+               "  staffchat: false\n" +
+               "  adminchat: false\n" +
                "  reload: true\n" +
                "  info: true\n";
+            
     }
 }
 

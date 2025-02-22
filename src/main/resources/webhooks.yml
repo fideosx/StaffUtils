@@ -1,0 +1,31 @@
+# ----------------------------------------------------------------------------------------------------------------------------
+# Configuración - WebHooks
+# Source: https://github.com/fideosx/StaffUtils
+# Example:
+#   id: "123456" - Rol a mencionar (opcional)
+#   url: "https://discord.com/api/webhooks/123" - WebHook URL
+#   header: "ALERT" - Título del embed
+#   message:
+#     - "Tu"
+#     - "Mensaje"
+#     - "Aquí"
+# Placeholders: {player} - Ejecutor, {target} - Objetivo, {message} - Mensaje, {reason} - Razón
+# ----------------------------------------------------------------------------------------------------------------------------
+webhooks:
+  helpop:
+    id: ""
+    url: ""
+    header: "HELPOP"
+    message:
+      - "Jugador: {player}"
+      - "Mensaje: {message}"
+      - "Por favor, un staff atienda esta solicitud."
+  report:
+    id: ""
+    url: ""
+    header: "REPORT"
+    message:
+      - "Jugador: {player}"
+      - "Target: {target}"
+      - "Razón: {reason}"
+      - "Por favor, un staff atienda esta solicitud."

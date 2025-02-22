@@ -28,7 +28,7 @@ public class StaffUtils extends Plugin {
     public void onDisable() {
         getLogger().info(ChatColor.RED + "StaffUtils ha sido deshabilitado correctamente.");
     }
-
+//  Registrar Cmds y Listeners
     private void registerCommands() {
         if (ConfigManager.isModuleEnabled("helpop")) getProxy().getPluginManager().registerCommand(this, new Helpop());
         if (ConfigManager.isModuleEnabled("helpop")) getProxy().getPluginManager().registerCommand(this, new HelpopReply());
@@ -42,21 +42,21 @@ public class StaffUtils extends Plugin {
         if (ConfigManager.isModuleEnabled("adminchat")) getProxy().getPluginManager().registerCommand(this, new AdminChat());
         if (ConfigManager.isModuleEnabled("reload")) getProxy().getPluginManager().registerCommand(this, new Reload());
         if (ConfigManager.isModuleEnabled("info")) getProxy().getPluginManager().registerCommand(this, new Info());
-        if (ConfigManager.isModuleEnabled("queue")) getProxy().getPluginManager().registerCommand(this, new QueueCommand()); // Registra el comando
-        if (ConfigManager.isModuleEnabled("queue"))getProxy().getPluginManager().registerListener(this, new QueueManager()); // Registra el listener
+        if (ConfigManager.isModuleEnabled("queue")) getProxy().getPluginManager().registerCommand(this, new QueueCommand());
+        if (ConfigManager.isModuleEnabled("queue"))getProxy().getPluginManager().registerListener(this, new QueueManager());
     }
 
     private void registerListeners() {
         ProxyServer.getInstance().getPluginManager().registerListener(this, new ChatListener());
     }
-
+// Modulos
     private void logModulesStatus() {
         String[] modules = {"helpop", "reports", "alerts", "staffchat", "adminchat", "reload", "info"};
         for (String module : modules) {
             if (ConfigManager.isModuleEnabled(module)) {
-                getLogger().info(ChatColor.GRAY + " » " + ChatColor.AQUA + module + ChatColor.GREEN + " activado.");
+                getLogger().info(ChatColor.AQUA + module + ChatColor.GREEN + " activado.");
             } else {
-                getLogger().info(ChatColor.GRAY + " » " + ChatColor.AQUA + module + ChatColor.RED + " desactivado.");
+                getLogger().info(ChatColor.AQUA + module + ChatColor.RED + " desactivado.");
             }
         }
     }

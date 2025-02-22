@@ -49,6 +49,7 @@ public class ReportAccept extends Command {
             if (reporter != null) {
                 reporter.sendMessage(new TextComponent(ConfigManager.getMessage("report_handled")
                         .replace("{staff}", staff.getName())));
+                        
             }
         }
 

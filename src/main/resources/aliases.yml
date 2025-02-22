@@ -1,3 +1,9 @@
+# ----------------------------------------------------------------------------------------------------------------------------
+# Configuración - Alias
+# Source: https://github.com/fideosx/StaffUtils
+# Puedes usar más de un alias separando con una coma "," report: ["report", "rep"]
+# Asegurate de no usar un alias que esté usando otro plugin, de lo contrario no funcionará.
+# ----------------------------------------------------------------------------------------------------------------------------
 aliases:
   report: ["report", "rep"]
   report-accept: ["report-accept", "ra"]
