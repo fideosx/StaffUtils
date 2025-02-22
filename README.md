@@ -1,5 +1,6 @@
 # Requeriments
 - BungeeCord (Working on BungeeCord Forks, tested on XCord)
+- LuckPerms (for permissions)
 # Features
 - Staff and Admin Chats
 - Helpop and report Commands
